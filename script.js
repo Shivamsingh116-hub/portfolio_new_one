@@ -75,7 +75,9 @@ function typeEffect() {
     setTimeout(typeEffect, isDeleting ? 50 : 100);
 }
 
-typeEffect();
+if (typingElement) {
+    typeEffect();
+}
 
 /* =========================================================
    ACTIVE NAVIGATION HIGHLIGHT
@@ -420,21 +422,29 @@ window.addEventListener(
 );
 
 /* =========================================================
-   END OF FILE
+   SCROLL TO TOP BUTTON
 ========================================================= */
+
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add("show");
-  } else {
-    scrollBtn.classList.remove("show");
-  }
-});
+if (scrollBtn) {
 
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+    window.addEventListener("scroll", () => {
+
+        scrollBtn.classList.toggle(
+            "show",
+            window.scrollY > 300
+        );
+
+    }, { passive: true });
+
+    scrollBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
