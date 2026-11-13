@@ -54,95 +54,57 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
 
-    <!-- Structured data helps search engines understand the person and website.
-         Keep this information consistent with the visible page content. -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://shivamsingh116.vercel.app/#person",
-          "name": "Shivam Singh",
-          "url": "https://shivamsingh116.vercel.app/",
-          "image": {
-            "@type": "ImageObject",
-            "url": "https://shivamsingh116.vercel.app/preview.png"
-          },
-          "jobTitle": "Full Stack Developer",
-          "description": "Full Stack Developer with industry experience building and deploying production-ready MERN and PHP/MySQL applications, business management systems, dynamic websites and REST APIs.",
-          "email": "mailto:solankishivam116@gmail.com",
-          "telephone": "+91-9996761239",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Rewari",
-            "addressCountry": "IN"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/shivamsingh116/",
-            "https://github.com/Shivamsingh116-hub",
-            "https://www.instagram.com/shivam_0.0.4"
-          ],
-          "knowsAbout": [
-            "Full Stack Development",
-            "MERN Stack",
-            "JavaScript",
-            "TypeScript",
-            "React.js",
-            "Next.js",
-            "Node.js",
-            "Express.js",
-            "PHP",
-            "Python",
-            "REST API Development",
-            "MongoDB",
-            "MySQL",
-            "Redis",
-            "JWT Authentication",
-            "Role-Based Access Control",
-            "Database Design",
-            "Query Optimization",
-            "CI/CD"
-          ],
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "WCTM, Gurugram",
-            "parentOrganization": {
-              "@type": "CollegeOrUniversity",
-              "name": "Maharshi Dayanand University"
-            }
-          },
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Ainosof Technology"
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://shivamsingh116.vercel.app/#website",
-          "url": "https://shivamsingh116.vercel.app/",
-          "name": "Shivam Singh | Full Stack Developer Portfolio",
-          "description": "Professional portfolio of Shivam Singh, Full Stack Developer.",
-          "inLanguage": "en-IN",
-          "publisher": {
-            "@id": "https://shivamsingh116.vercel.app/#person"
-          }
-        },
-        {
-          "@type": "ProfilePage",
-          "@id": "https://shivamsingh116.vercel.app/#profile",
-          "url": "https://shivamsingh116.vercel.app/",
-          "name": "Shivam Singh — Full Stack Developer",
-          "mainEntity": {
-            "@id": "https://shivamsingh116.vercel.app/#person"
-          },
-          "isPartOf": {
-            "@id": "https://shivamsingh116.vercel.app/#website"
-          }
-        }
-      ]
+      "@type": "Person",
+      "@id": "https://shivamsingh116.vercel.app/#person",
+      "name": "Shivam Singh",
+      "url": "https://shivamsingh116.vercel.app/",
+      "jobTitle": "Full Stack Developer",
+      "sameAs": [
+        "https://www.linkedin.com/in/shivamsingh116/",
+        "https://github.com/Shivamsingh116-hub"
+      ],
+      "knowsAbout": [
+        "Full Stack Development",
+        "MERN Stack",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "PHP",
+        "MySQL",
+        "MongoDB",
+        "TypeScript",
+        "REST API Development"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ainosof Technology"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://shivamsingh116.vercel.app/#website",
+      "url": "https://shivamsingh116.vercel.app/",
+      "name": "Shivam Singh | Full Stack Developer Portfolio",
+      "publisher": {
+        "@id": "https://shivamsingh116.vercel.app/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://shivamsingh116.vercel.app/#profile",
+      "url": "https://shivamsingh116.vercel.app/",
+      "mainEntity": {
+        "@id": "https://shivamsingh116.vercel.app/#person"
+      }
     }
-    </script>
+  ]
+}
+</script>
 
     <!-- =========================================
       FONTS
@@ -168,45 +130,7 @@
   ========================================== -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- =========================================
-      STRUCTURED DATA (VERY IMPORTANT 🔥)
-  ========================================== -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Shivam Singh",
-  "jobTitle": "Full Stack Developer",
-  "url": "https://shivamsingh116.vercel.app",
-  "sameAs": [
-    "https://www.linkedin.com/in/shivamsingh116",
-    "https://github.com/Shivamsingh116-hub"
-  ],
-  "knowsAbout": [
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "JavaScript",
-    "PHP",
-    "MySQL",
-    "Full Stack Development",
-    "MERN Stack"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Gurgaon",
-    "addressRegion": "Haryana",
-    "addressCountry": "India"
-  },
-  "image": "https://shivamsingh116.vercel.app/preview.png",
-  "description": "Full Stack MERN Developer building scalable web applications using React, Node.js, Express, and MongoDB.",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelance Developer"
-  }
-}
-</script>
+   
   </head>
 
   <body>
