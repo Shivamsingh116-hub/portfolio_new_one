@@ -192,28 +192,53 @@ navLinks.forEach(link => {
 /* =========================================================
    MOBILE MENU TOGGLE
 ========================================================= */
-mobileMenuBtn.addEventListener("click", () => {
 
-    navbar.classList.toggle("mobile-active");
+if (mobileMenuBtn && navbar) {
 
-    const icon =
-        mobileMenuBtn.querySelector("i");
+    mobileMenuBtn.addEventListener("click", () => {
 
-    if (
-        navbar.classList.contains("mobile-active")
-    ) {
+        navbar.classList.toggle("mobile-active");
 
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
+        const icon = mobileMenuBtn.querySelector("i");
 
-    } else {
+        if (icon) {
+            if (navbar.classList.contains("mobile-active")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+            } else {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+        }
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+    });
 
-    }
+}
 
-});
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICK
+========================================================= */
+
+if (mobileMenuBtn && navbar) {
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navbar.classList.remove("mobile-active");
+
+            const icon = mobileMenuBtn.querySelector("i");
+
+            if (icon) {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+
+        });
+
+    });
+
+}
 
 /* =========================================================
    CLOSE MOBILE MENU AFTER CLICK
@@ -358,22 +383,23 @@ if (footer) {
 /* =========================================================
    KEYBOARD ACCESSIBILITY
 ========================================================= */
+
 document.addEventListener("keydown", event => {
 
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && navbar) {
 
         navbar.classList.remove("mobile-active");
 
-        const icon =
-            mobileMenuBtn.querySelector("i");
+        const icon = mobileMenuBtn?.querySelector("i");
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+        if (icon) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
 
     }
 
 });
-
 /* =========================================================
    PAGE LOADED ANIMATION
 ========================================================= */
