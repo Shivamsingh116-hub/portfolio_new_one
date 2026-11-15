@@ -23,10 +23,12 @@ const typingElement = document.querySelector(".typing-text");
 ========================================================= */
 const typingTexts = [
     "MERN Stack Developer",
-    "Full Stack Engineer",
-    "Backend Focused Developer",
-    "API & Database Builder",
-    "Modern Web Creator"
+    "Backend-Focused Engineer",
+    "Full Stack Developer + AI",
+    "REST API Architect",
+    "Database & Systems Builder",
+    "Backend · APIs · AI Integration",
+    "Turning Ideas into Products"
 ];
 
 let textIndex = 0;
@@ -448,3 +450,29 @@ if (scrollBtn) {
     });
 
 }
+
+// =========================================================
+// EXPERIENCE: READ MORE TOGGLE
+// =========================================================
+(function () {
+  const toggleBtn = document.getElementById("experience-toggle");
+  const moreBox = document.getElementById("experience-more");
+
+  if (!toggleBtn || !moreBox) return;
+
+  const label = toggleBtn.querySelector(".read-more-text");
+
+  toggleBtn.addEventListener("click", function () {
+    const isOpen = moreBox.classList.toggle("open");
+
+    toggleBtn.setAttribute("aria-expanded", String(isOpen));
+    label.textContent = isOpen ? "Show less" : "Read more";
+
+    // When collapsing, bring the card back into view
+    if (!isOpen) {
+      toggleBtn
+        .closest(".timeline-item")
+        .scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  });
+})();
