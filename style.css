@@ -464,6 +464,7 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  text-align:justify;
 }
 
 .timeline-date {
